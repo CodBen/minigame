@@ -38,3 +38,14 @@ function verifier(nombre) {
 
 }
 
+// Vérifier que c'est bien un chiffre inséré
+input.addEventListener('keyup', () => {
+    if(isNaN(input.value)) {
+      // Afficher le message d'erreur
+      error.style.display = "inline";
+    }
+    else {
+      // Cacher le message d'erreur
+      error.style.display = "none";
+    }
+  });
