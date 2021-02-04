@@ -49,3 +49,20 @@ input.addEventListener('keyup', () => {
       error.style.display = "none";
     }
   });
+
+  formulaire.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    if(isNaN(input.value) || input.value == ''){
+       // Mettre notre bordure de formulaire en rouge (red)
+      input.style.borderColor = "red";
+    }
+    else {
+      // Mettre notre bordure de formulaire en gris (silver)
+      coups++;
+      input.style.borderColor = "silver";
+      nombreChoisi = input.value;
+      input.value = '';
+      verifier(nombreChoisi);
+    }
+  });
