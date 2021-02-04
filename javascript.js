@@ -34,6 +34,7 @@ function verifier(nombre) {
     }
 
 //Vérification et comparaison.
-
+    document.querySelector('#instructions').prepend(instruction);
 
 }
+
